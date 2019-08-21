@@ -35,13 +35,9 @@ export class RecipesService {
   getRecipe(recipeId: string){
     // console.log(recipeId)
     return this.recipes.find(recipe => recipe.id == recipeId);
-    this.recipes.forEach(element => {
-      if(element.id == recipeId){
-        // console.log("Hai")
-        // console.log(element)
-        // return element;
-        return console.log(element)
-      }
-    });
+  }
+
+  deleteRecipe(recipeId: string){
+    
   }
 }
