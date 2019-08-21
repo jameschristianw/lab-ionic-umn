@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Test Tugas Teori Week 01</title>
+  
+  <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+</head>
+<body>
+  <style>
+    .title{
+      /* text-align: start; */
+      color: white ;
+      padding-left: 8px;
+    }
+    .header{
+    }
+    .background-white{
+      background: white;
+    }
+    .background-primary{
+      --background: #107fdf;
+    }
+    .card-container{
+      /* padding: 5px; */
+    }
+    .card-title{
+      font-weight: bold;
+      font-size: 24px;
+      color: black ;
+    }
+    .button{
+      text-transform: none; 
+      --border-radius: 2px;
+      --box-shadow: none;
+    }
+    .button-remote{
+
+    }
+    .button-file-transfer{
+        --background: '#888888';
+        --color: #0A7fdf;
+    }
+    .button-install{
+        --background: white;
+        --color: #0A7fdf;
+    }
+    .content-button{
+      align-items: flex-end
+    }
+    .small-text{
+        font-size: 14px;
+    }
+    .text-input{
+        --padding-start: 0px;
+        border-bottom: 1px solid rgb(127, 127, 127);
+    }
+    .no-margin{
+        margin: 0px;
+    }
+    .no-paddig{
+        padding: 0px;
+    }
+    .padding16{
+        
+    }
+    .content2{
+        background-color: #0A7fdf; 
+        margin: 0px; 
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .clearing{
+      padding-top: 40px;
+    }
+    .input-container{
+      padding-top: 30px;
+    }
+  </style>
+    
+  <ion-app>
+  
+    <ion-content>
+        <ion-tabs>
+            <ion-tab tab="connect" >
+                <ion-nav>
+                    <ion-header>
+                      <ion-toolbar class="background-primary">
+                        <ion-grid>
+                          <ion-row justify-content-start>
+                            <ion-col size="11">
+                              <ion-title class="title">
+                                  TeamViewer
+                              </ion-title>
+                            </ion-col>
+                            <ion-col size="1">
+                              <ion-icon name="more" color="light"></ion-icon>
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-toolbar>
+                    </ion-header>
+                    <ion-content>
+                        <div padding-start padding-end padding-bottom>
+                            <h3>Control Remote Device</h3>
+                            <p class="small-text">Please enter your partner's ID in order to control the remote device.</p>
+                            <ion-input placeholder="Partner ID" name="partnerId" class="text-input"></ion-input>
+                            <div margin-top>
+                                <ion-button class="button">Remote Control</ion-button>
+                                <ion-button class="button button-file-transfer">File Transfer</ion-button>
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <ion-grid padding-start padding-end padding-bottom>
+                                <ion-row>
+                                    <h3 style="color: white;">Allow Remote Control</h3>
+                                    <!-- <h3 style="color: white;">Control Remote Device</h3> -->
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col align-self-center>
+                                        <ion-button class="button button-install" size="small">INSTALL QUICKSUPPORT</ion-button>
+                                    </ion-col>
+                                    <ion-col>
+                                        <!-- <ion-image src="quicksupport.png"></ion-image> -->
+                                        <img src="quicksupport.png" align="right"></img>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </div>
+                    </ion-content>
+                    <!-- <ion-content class="background-primary">
+                    </ion-content> -->
+                </ion-nav>
+            </ion-tab>
+            <ion-tab tab="computers">
+                <ion-nav>
+                    <ion-header>
+                      <ion-toolbar class="background-primary">
+                        <ion-grid>
+                          <ion-row justify-content-start>
+                            <ion-col size="11">
+                              <ion-title class="title">
+                                  Computers & Contacts
+                              </ion-title>
+                            </ion-col>
+                            <ion-col size="1">
+                              <ion-icon name="more" color="light"></ion-icon>
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-toolbar>
+                    </ion-header>
+                    <ion-content>
+                      <div padding class="input-container">
+                          <ion-input placeholder="Email" class="text-input"></ion-input>
+                          <div class="clearing"></div>
+                          <ion-input placeholder="Password" class="text-input"></ion-input>
+                      </div>
+                      <div padding>
+                          <ion-button class="button">SIGN IN</ion-button>
+                          <ion-button class="button button-file-transfer">SIGN UP</ion-button>
+                      </div>
+                      
+                      <div class="content2">
+                          <ion-grid padding-start padding-end padding-bottom>
+                              <ion-row>
+                                  <ion-col align-self-center size="8">
+                                      <ion-label class="button button-install" color="light">See the online status of your contacts</ion-label>
+                                  </ion-col>
+                                  <ion-col size="4">
+                                      <!-- <ion-image src="quicksupport.png"></ion-image> -->
+                                      <img src="quicksupport.png" align="right"></img>
+                                  </ion-col>
+                              </ion-row>
+                          </ion-grid>
+                      </div>
+                    </ion-content>
+                </ion-nav>
+            </ion-tab>
+            <ion-tab tab="chat">
+                <ion-nav>
+                    <ion-header>
+                      <ion-toolbar class="background-primary">
+                        <ion-grid>
+                          <ion-row justify-content-start>
+                            <ion-col size="11">
+                              <ion-title class="title">
+                                  Conversation
+                              </ion-title>
+                            </ion-col>
+                            <ion-col size="1">
+                              <ion-icon name="more" color="light"></ion-icon>
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-toolbar>
+                    </ion-header>
+                    <ion-content>
+                      <div padding class="input-container">
+                          <ion-input placeholder="Email" class="text-input"></ion-input>
+                          <div class="clearing"></div>
+                          <ion-input placeholder="Password" class="text-input"></ion-input>
+                      </div>
+                      <div padding>
+                          <ion-button class="button">SIGN IN</ion-button>
+                          <ion-button class="button button-file-transfer">SIGN UP</ion-button>
+                      </div>
+                      
+                      <div class="content2">
+                          <ion-grid padding-start padding-end padding-bottom>
+                              <ion-row>
+                                  <ion-col align-self-center size="8">
+                                      <ion-label class="button button-install" color="light">Exchange instant messages</ion-label>
+                                  </ion-col>
+                                  <ion-col size="4">
+                                      <!-- <ion-image src="quicksupport.png"></ion-image> -->
+                                      <img src="quicksupport.png" align="right"></img>
+                                  </ion-col>
+                              </ion-row>
+                          </ion-grid>
+                      </div>
+                    </ion-content>
+                </ion-nav>
+            </ion-tab>
+    
+            <!-- Maap pak klo logo yg tab Connect sama Computers ga sama
+            kan yang penting tampilannya sama..
+            icon bisa diganti nanti :) -->
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="connect">
+                <ion-label>Connect</ion-label>
+                <ion-icon name="home"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="computers">
+                <ion-label>Computers</ion-label>
+                <ion-icon name="settings"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="chat">
+                <ion-label>Chat</ion-label>
+                <ion-icon name="md-chatbubbles"></ion-icon>
+            </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
+    </ion-content>
+    
+  </ion-app>
+  
+  <script>
+    var content = document.querySelector('ion-content');
+    content.scrollEvents = true;
+    content.addEventListener('ionScrollStart', () => console.log('scroll start'));
+    content.addEventListener('ionScroll', (ev) => console.log('scroll', ev.detail));
+    content.addEventListener('ionScrollEnd', () => console.log('scroll end'));
+  </script>
+  <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>
