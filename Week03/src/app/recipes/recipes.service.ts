@@ -29,15 +29,19 @@ export class RecipesService {
   constructor() { }
 
   getAllRecipes(){
-    return this.recipes;
+    return [...this.recipes];
   }
 
   getRecipe(recipeId: string){
     // console.log(recipeId)
-    return this.recipes.find(recipe => recipe.id == recipeId);
+    return {
+      ...this.recipes.find(recipe => recipe.id == recipeId)
+    };
   }
 
   deleteRecipe(recipeId: string){
-    
+    this.recipes = this.recipes.filter(recipe => {
+      return recipe.id !== recipeId
+    })
   }
 }

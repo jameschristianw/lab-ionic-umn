@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let recipe of recipes" (click)="foodClick(recipe.id)">
+  <ion-list padding>
+    <ion-item *ngFor="let recipe of recipes" (click)="foodClick(recipe.id)" [routerLink]="['./', recipe.id]" no-padding>
       <ion-avatar slot="start">
         <ion-img [src]="recipe.imageUrl"></ion-img>
       </ion-avatar>
