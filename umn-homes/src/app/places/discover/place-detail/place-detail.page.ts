@@ -34,6 +34,9 @@ export class PlaceDetailPage implements OnInit {
     console.log("Button Booking clicked");
     this.navCtr.pop()
     this.router.navigate(['/bookings'])
+    
+    //ini harusnya gaada..
+    //cuman pengen tau aja
     this.placesService.addToList()
   }
 
