@@ -6,6 +6,7 @@ import { Place } from './places.model'
 })
 
 export class PlacesService {
+  private place: Place;
   private places: Place[] = [
     new Place(
       "p1", 
@@ -43,5 +44,15 @@ export class PlacesService {
 
   getAllPlaces(){
     return [...this.places]
+  }
+
+  getPlaceByID(placeId: string){
+    return this.places.find(place => place.id == placeId)
+  }
+
+  addToList(){
+    this.place = new Place("p6", "New Place", "Manually added", "", 123123);
+
+    this.places.push(this.place);
   }
 }
