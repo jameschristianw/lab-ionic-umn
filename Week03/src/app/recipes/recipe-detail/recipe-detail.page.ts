@@ -31,6 +31,22 @@ export class RecipeDetailPage implements OnInit {
     )
   }
   
+  ionViewWillEnter(){
+    console.log("Recipe Detail Page will enter")
+  }
+
+  ionViewDidEnter(){
+    console.log("Recipe Detail Page did enter")
+  }
+
+  ionViewWillLeave(){
+    console.log("Recipe Detail Page will leave")
+  }
+
+  ionViewDidLeave(){
+    console.log("Recipe Detail Page did leave")
+  }
+
   deleteRecipe(){
     this.recipesSvc.deleteRecipe(this.loadedRecipe.id)
     this.router.navigate(['/recipes'])

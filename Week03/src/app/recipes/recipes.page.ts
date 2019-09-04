@@ -18,6 +18,23 @@ export class RecipesPage implements OnInit {
     this.recipes = this.recipesService.getAllRecipes();
   }
 
+  ionViewWillEnter(){
+    console.log("Recipe Page will enter")
+    this.recipes = this.recipesService.getAllRecipes();
+  }
+
+  ionViewDidEnter(){
+    console.log("Recipe Page did enter")
+  }
+
+  ionViewWillLeave(){
+    console.log("Recipe Page will leave")
+  }
+
+  ionViewDidLeave(){
+    console.log("Recipe Page did leave")
+  }
+
   foodClick(id: string){
     // console.log(this.recipesService.getRecipe(id));
 
