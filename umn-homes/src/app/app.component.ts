@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Platform, MenuController, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,9 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private menuCtr: MenuController,
-    private navCtr: NavController
+    private navCtr: NavController,
+    private router: Router,
+    private authService: AuthService
   ) {
     this.initializeApp();
   }
@@ -27,9 +31,8 @@ export class AppComponent {
     });
   }
 
-  closeMenu(){
-    // console.log("Booking")
-    this.navCtr.pop()
-    this.menuCtr.toggle()
+  onLogout(){
+    this.authService.logout()
+    this.router.navigateByUrl('/auth')
   }
 }

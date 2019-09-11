@@ -7,7 +7,7 @@ import { Place } from './places.model'
 
 export class PlacesService {
   private place: Place;
-  private places: Place[] = [
+  places: Place[] = [
     new Place(
       "p1", 
       "Serpong m-Town", 
