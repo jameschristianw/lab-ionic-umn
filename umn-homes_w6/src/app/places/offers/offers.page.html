@@ -26,12 +26,7 @@
           </ion-item>
         </ion-list> -->
         <ion-list>
-          <ion-item-sliding *ngFor="let offer of offers">
-            <ion-item-options side="end">
-              <ion-item-option (click)="editOffer(offer.id, slidingItem)">
-                <ion-icon name="create" slot="icon-only"></ion-icon>
-              </ion-item-option>
-            </ion-item-options>
+          <ion-item-sliding *ngFor="let offer of offers" #slidingItem>
             <ion-item [routerLink]="['/', 'places', 'tabs', 'offers', offer.id]">
               <ion-thumbnail slot="start">
                 <ion-img [src]="offer.imgUrl"></ion-img>
@@ -41,6 +36,17 @@
                 <p>{{ offer.description }}</p>
               </ion-label>
             </ion-item>
+            <!-- Original -->
+            <ion-item-options>
+              <ion-item-option (click)="editOffer(offer.id, slidingItem)" color="secondary">
+                <ion-icon name="create" slot="icon-only"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+            <!-- <ion-item-options>
+              <ion-item-option (click)="onEdit(offer.id)" color="secondary" [routerLink]="['/', 'places', 'tabs', 'offers', 'edit', offer.id]">
+                <ion-icon name="create" slot="icon-only"></ion-icon>
+              </ion-item-option>
+            </ion-item-options> -->
           </ion-item-sliding>
         </ion-list>
       </ion-col>
