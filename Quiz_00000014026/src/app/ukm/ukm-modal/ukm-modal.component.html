@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ selectedUKM.title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <p>Beneran mau join?</p>
+  <ion-button color="warning" (click)="onCancel()">Ngga jadi deh</ion-button>
+  <ion-button color="primary" (click)="onJoin(selectedUKM)">Mau bangetttt</ion-button>
+</ion-content>
