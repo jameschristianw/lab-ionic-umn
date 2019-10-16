@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-weight: bold">{{album.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2">
+        <ion-label>S O N G S</ion-label>
+        <ion-list> 
+          <ion-item class="ion-no-padding" *ngFor="let songs of album.songs">
+            <ion-label>
+              <h2 style="font-weight: bold">{{ songs.title }}</h2>
+              <p>{{ songs.minute }} minutes {{ songs.second }} seconds</p>
+            </ion-label>
+            <ion-icon name="heart" (click)="loveClick(songs, album)" [color]="songs.fav ? 'danger' : 'medium'"></ion-icon>
+          </ion-item>
+          <p class="ion-text-center">Total: {{ album.songs.length }} songs</p>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

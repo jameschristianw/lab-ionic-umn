@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" style="font-weight: bold; color:black">Your Favourite Musics</ion-title>
+    <ion-buttons slot="primary">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2">
+        <ion-label>S O N G S</ion-label> <br>
+        <p *ngIf="isFavEmpty()" class="ion-padding-top" style="color: gray">There are no favourite songs yet.</p>
+        <ion-list *ngFor="let f of favSongs">
+          <ion-item class="ion-no-padding">
+            <ion-label>
+              <h2 style="font-weight: bold">{{ f.title }}</h2>
+              <p>{{ f.minute }} minutes {{ f.second }} seconds</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
