@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>UKM</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>UMN UKM</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2">
+        <ion-list *ngFor="let UKM of UKM_LIST">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>{{ UKM.title }}</ion-card-title>
+              <ion-card-subtitle>{{ UKM.desc }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-text-right">
+                <ion-button slot="primary" (click)="onJoin(UKM)">Join</ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
