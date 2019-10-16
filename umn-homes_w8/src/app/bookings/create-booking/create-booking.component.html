@@ -62,12 +62,11 @@
             <ion-datetime
               display-format="MMM DD YYYY"
               picker-format="YY MMM DD"
-              [min]="startDateCtrl.value"
+              [min]="startDate.value"
               [max]="selectedPlace.availableTo.toISOString()"
               [ngModel]="endDate"
-              name="date-from"
+              name="date-to"
               required
-              #startDateCtrl="ngModel"
             ></ion-datetime>
           </ion-item>
         </ion-col>

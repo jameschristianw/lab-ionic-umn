@@ -35,8 +35,8 @@ export class CreateBookingComponent implements OnInit {
       ).toISOString()
     }
     else{
-      this.startDate = availableFrom.toUTCString();
-      this.endDate = availableTo.toUTCString()
+      this.startDate = availableFrom.toISOString();
+      this.endDate = availableTo.toISOString()
       console.log(this.startDate)
       console.log(this.endDate)
     }
