@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Todo, TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  todos: Todo[];
 
+  constructor(private todoSvc: TodoService) {}
+
+  ngOnInit(){
+    this.todoSvc.getTodos().subscribe(res => {
+      this.todos = res;
+    })
+  }
+
+  remove(item){
+    this.todoSvc.removeTodo(item.id)
+  }
 }
