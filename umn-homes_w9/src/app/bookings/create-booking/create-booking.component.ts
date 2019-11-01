@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 export class CreateBookingComponent implements OnInit {
   @Input() selectedPlace: Place;
   @Input() selectedMode: 'select' | 'random'
-  @ViewChild('f') form: NgForm
+  @ViewChild('f', null) form: NgForm
   startDate: string
   endDate: string
 
