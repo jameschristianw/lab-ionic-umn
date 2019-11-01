@@ -6,5 +6,5 @@ export const ApiConfig = {
     storageBucket: "mcp-week10.appspot.com",
     messagingSenderId: "725888123903",
     appId: "1:725888123903:web:29d8832d584bde54565dca",
-    measurementId: "G-HL0CFXNLF6"
+    measurementId: "G-HL0CFXNLF6" 
 }
