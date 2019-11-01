@@ -1,4 +1,4 @@
-import { ApiConfig } from './config';
+import { ApiConfig } from '../app/config';
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
