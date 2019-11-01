@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Mobile Cross Platform - Week 1</title>
+
+  <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+</head>
+
+<style>
+  .title{
+    text-align: center;
+    color: white ;
+  }
+  .header{
+  }
+  .background-white{
+    --background: white;
+  }
+  .background-primary{
+    --background: #3780ff;
+  }
+  .card-container{
+    /* padding: 5px; */
+  }
+  .card-title{
+    font-weight: bold;
+    font-size: 24px;
+    color: black ;
+  }
+  .button{
+   text-transform: none; 
+   --border-radius: 10px;
+  }
+  .content-button{
+    align-items: flex-end
+  }
+</style>
+
+<body>
+  <ion-header>
+    <ion-toolbar class="background-primary">
+      <ion-title class="title ion-text-lg-center">Budget Planner</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid size="12">
+      <ion-row>
+        <ion-col size=3></ion-col>
+        <ion-col size=6>
+          <ion-card class="card-container ion-margin">
+            <ion-card-header class="ion-margin-buttom">
+              <ion-label class="card-title">Input Pengeluaran</ion-label><br>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-list>
+                <ion-item>
+                  <ion-label class="card-content-label">Nama Pengeluaran : </ion-label>
+                  <ion-input placeholder="Pengeluaran" name="pengeluaran"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="card-content-label ion-text-md">Jumlah Pengeluaran : </ion-label><br>
+                  <ion-input type="number" placeholder="Jumlah" name="jumlah"></ion-input>
+                </ion-item>
+                <ion-card-content class="ion-float-end ion-margin-bottom">
+                  <ion-button color="danger" fill="outline" class="button" ><ion-icon name="close" slot="start"></ion-icon> Hapus</ion-button>
+                  <ion-button color="primary" class="button" ><ion-icon name="add" slot="start"></ion-icon>Tambah</ion-button>
+                </ion-card-content>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size=3></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <!-- <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script> -->
+  <script type="module" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+  <!-- <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script> -->
+  <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
